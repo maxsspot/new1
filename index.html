@@ -7,7 +7,7 @@
     </head>
     <body>
         <br>
-        <input type = "checkbox" id = "descriptions" /><label for = "descriptions">Show Decriptions</label><br><br><br>
+        <input type = "checkbox" id = "descriptions" selected onchange = "desc()" /><label for = "descriptions">Show Decriptions</label><br><br><br>
         <img oncontextmenu = "return false;" src = "https://purepng.com/public/uploads/large/purepng.com-sign-stoptraffic-signsign-stopnotify-driversstop-signs-1701527614531t0ftg.png" />
         <p>A stop sign indicates that you need to stop. You need to come to a complete stop for around 3 seconds, then you may continue.</p>
         <br>
@@ -90,6 +90,18 @@
         <br>
         <img oncontextmenu = "return false;" style = "height:150px;border-radius:10px;" src = "https://www.clipartbest.com/cliparts/aiq/LAB/aiqLABeiM.jpeg" />
         <p>A no parking sign indicates that you may not park in a certain area.</p>
+        <script>
+            desc();
+            function desc () {
+                if (document.getElementById ("descriptions").checked) {
+                    localStorage.setItem ("descriptions","true");
+                    document.getElementsByTagName ("p").style.display = "block";
+                } else {
+                    localStorage.setItem ("descriptions","false");
+                    document.getElementsByTagName ("p").style.display = "none";
+                }
+            }
+        </script>
         <style>
           * {
     font-family:"Lato", sans-serif;
