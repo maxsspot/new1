@@ -91,19 +91,19 @@
         <img oncontextmenu = "return false;" style = "height:150px;border-radius:10px;" src = "https://www.clipartbest.com/cliparts/aiq/LAB/aiqLABeiM.jpeg" />
         <p>A no parking sign indicates that you may not park in a certain area.</p>
         <script>
-            var paragraphs = document.getElementsByTagName("p");
+            var paragraphs = document.querySelectorAll('p');
             desc();
             function desc () {
                 if (document.getElementById ("descriptions").checked) {
                     localStorage.setItem ("descriptions","true");
-                    for (var i = 0; i < paragraphs.length; i++) {
-                        paragraphs[i].style.display = "block";
-                    }
+                    paragraphs.forEach(function(paragraph) {
+                        paragraph.style.display = 'none';
+                    });
                 } else {
                     localStorage.setItem ("descriptions","false");
-                    for (var i = 0; i < paragraphs.length; i++) {
-                        paragraphs[i].style.display = "block";
-                    }
+                    paragraphs.forEach(function(paragraph) {
+                        paragraph.style.display = 'none';
+                    });
                 }
             }
         </script>
