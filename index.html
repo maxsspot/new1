@@ -100,13 +100,13 @@
                 if (document.getElementById ("descriptions").checked) {
                     localStorage.setItem ("descriptions","true");
                     paragraphs.forEach(function(paragraph) {
-                        paragraph.style.opacity = '1';
+                        //paragraph.style.opacity = '1';
                         setTimeout (function () {
                             paragraph.style.display = 'block';
                         }, 500);
                     });
                     lines.forEach(function(lines) {
-                        lines.style.opacity = '1';
+                        //lines.style.opacity = '1';
                         setTimeout (function () {
                             lines.style.display = 'block';
                         }, 500);
@@ -114,13 +114,13 @@
                 } else {
                     localStorage.setItem ("descriptions","false");
                     paragraphs.forEach(function(paragraph) {
-                        paragraphs.style.opacity = '0';
+                        //paragraphs.style.opacity = '0';
                         setTimeout (function () {
                             paragraph.style.display = 'none';
                         }, 500);
                     });
                     lines.forEach(function(lines) {
-                        lines.style.opacity = '0';
+                        //lines.style.opacity = '0';
                         setTimeout (function () {
                             lines.style.display = 'none';
                         }, 500);
