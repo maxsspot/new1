@@ -190,7 +190,10 @@
             var score=0;
 
             function submit () {
-                if (document.getElementById ("q1").value=="stop") {
+                if (document.getElementById ("q1").value=="Stop Sign") {
+                    score++;
+                }
+                if (document.getElementById ("q2").value=="Speed Limit") {
                     score++;
                 }
                 alert (score+"/17");
