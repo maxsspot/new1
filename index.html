@@ -93,7 +93,9 @@
         <script>
             var paragraphs = document.querySelectorAll('p');
             var lines = document.querySelectorAll('hr');
+            
             desc();
+            
             function desc () {
                 if (document.getElementById ("descriptions").checked) {
                     localStorage.setItem ("descriptions","true");
@@ -112,6 +114,22 @@
                         lines.style.display = 'none';
                     });
                 }
+            }
+
+            if (localStorage.getItem ("descriptions") === "true") {
+                    paragraphs.forEach(function(paragraph) {
+                        paragraph.style.display = 'block';
+                    });
+                    lines.forEach(function(lines) {
+                        lines.style.display = 'block';
+                    });
+            } else {
+                    paragraphs.forEach(function(paragraph) {
+                        paragraph.style.display = 'none';
+                    });
+                    lines.forEach(function(lines) {
+                        lines.style.display = 'none';
+                    });
             }
         </script>
         <style>
