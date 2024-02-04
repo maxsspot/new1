@@ -100,18 +100,30 @@
                 if (document.getElementById ("descriptions").checked) {
                     localStorage.setItem ("descriptions","true");
                     paragraphs.forEach(function(paragraph) {
-                        paragraph.style.display = 'block';
+                        paragraph.style.opacity = '1';
+                        setTimeout (function () {
+                            paragraph.style.display = 'block';
+                        }, 500);
                     });
                     lines.forEach(function(lines) {
-                        lines.style.display = 'block';
+                        lines.style.opacity = '1';
+                        setTimeout (function () {
+                            lines.style.display = 'block';
+                        }, 500);
                     });
                 } else {
                     localStorage.setItem ("descriptions","false");
                     paragraphs.forEach(function(paragraph) {
-                        paragraph.style.display = 'none';
+                        paragraphs.style.opacity = '0';
+                        setTimeout (function () {
+                            paragraph.style.display = 'none';
+                        }, 500);
                     });
                     lines.forEach(function(lines) {
-                        lines.style.display = 'none';
+                        lines.style.opacity = '0';
+                        setTimeout (function () {
+                            lines.style.display = 'none';
+                        }, 500);
                     });
                 }
             }
@@ -119,6 +131,7 @@
         <style>
           * {
     font-family:"Lato", sans-serif;
+              transition:all 0.5s
 }
 
 body {
