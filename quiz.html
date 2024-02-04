@@ -186,6 +186,16 @@
         <button id = "submit">Submit</button>
         <br>
         <br>
+        <script>
+            var score=0;
+
+            function submit () {
+                if (document.getElementById ("q1").value=="stop") {
+                    score++;
+                }
+                alert (score+"/17");
+            }
+        </script>
         <style>
           * {
     font-family:"Lato", sans-serif;
