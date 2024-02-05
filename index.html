@@ -176,6 +176,10 @@ body {
     text-align:center;
 }
 
+label {
+    user-select:none;
+}
+            
 p {
     width:300px;
     margin:auto;
@@ -186,6 +190,11 @@ img {
     height:100px;
     margin:auto;
     border-radius:5px;
+    user-select:none;
+    -webkit-user-drag:none;
+    -moz-user-select:-moz-none;
+    -ms-user-select:none;
+    pointer-events:none;
 }
 
 hr {
@@ -193,13 +202,6 @@ hr {
     background-color:white;
     border:white solid 1px;
     border-radius:50px;
-}
-
-img {
-    user-select:none;
-    -webkit-user-drag:none;
-    -moz-user-select:-moz-none;
-    -ms-user-select:none;
 }
 
             label, input[type="checkbox"] {
